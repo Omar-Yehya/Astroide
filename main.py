@@ -18,14 +18,16 @@ def main():
             if event.type==pygame.QUIT:
                 return
 
-        screen.fill((0,0,0))
-
-        player.draw(screen)
-
-        pygame.display.flip()
-        
+       
         dt=Time.tick(60) / 1000
-        
+       
+ 
+        player.update(dt)
+        screen.fill((0,0,0))
+        player.draw(screen)
+        pygame.display.flip()
+ 
+
     pygame.quite()
 if __name__=="__main__":
     main()
