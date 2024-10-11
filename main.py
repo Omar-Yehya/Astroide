@@ -21,14 +21,18 @@ def main():
        
         dt=Time.tick(60) / 1000
        
- 
         player.update(dt)
+
+        
+
         screen.fill((0,0,0))
+
         player.draw(screen)
+
         pygame.display.flip()
  
 
-    pygame.quite()
+    pygame.quit()
 if __name__=="__main__":
     main()
 
